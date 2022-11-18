@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <style>
+        body,html{
+            background-color: #f2f6ff;
+            margin: 1 auto;
+            height: 100%;
+        }
+        header{
+            Padding: 5px 78px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        
+        footer{
+            height:50px;
+            background-color: rgba(10, 10, 48, 0.954);
+            border: 5px solid #f2f6ff;
+        }
+        .logostories{
+            margin: 0px;
+            padding-left: 10%;
+            font-weight: 500;
+            font-family: 'Raleway';
+            font-size: 22px;
+            font-style: italic;
+        }
+        .edstory{
+            display: inline-block;
+            width: 15%;
+            margin: 10px;
+        }
+        .dropdown{
+            display: inline-block;
+            width: 70%;
+            margin: 0px 10px;
+            height: 100%;
+        }
+        .dropdown,.select{
+            position: relative;
+            top: 50%;
+            transform: translateY(-90%); /* or try 50% */
+        }
+        main{
+            width: 70%;
+            padding: 2% 15%;
+        }
+        .item{
+            display: inline-block;
+            width: 30%;
+            margin: 0px 7px 16px 7px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid rgba(0,168,255,.3);
+        }
+        .img-container{
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .description{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.43;
+            color: rgba(0,0,0,.6);
+            margin: 4px 0px;
+            padding-top: 6px;
+        }
+        h3{
+            font-family: 'Raleway';
+            display: inline-block;
+            font-size: 18px;
+            text-align: left;
+            font-weight: 600;
+            margin: 0px;
+        }
+        img{
+            margin: 0px;
+        }
+        .author{
+            color: #0096ff;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 500;
+        }
+        .date{
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 14px;
+            font-weight: 300;
+        }
+        .author-container{
+            padding: 5% 0px 0px 0px;
+            margin: 0px;
+        }
+        select{
+            border: none;
+            font-size: 20px;
+        }
+        .categories-container{
+            margin: 0px 20px 20px 0px;
+            font-size: 16px;
+            padding-top: 10px;
+        }
+        .category{
+            display: inline-block;
+            padding: 6px 14px;
+            width: auto;
+            color: #0084ff;
+            box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+            border-radius: 15px;
+            border: 1px solid #0084ff;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .trend-heading{
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.94;
+            letter-spacing: -.9px;
+            margin: 10px 0px;
+            font-family: 'Raleway';
+        }
+        .filter-text{
+            margin: 0px 0px 0px 5px;
+        }
+        .active, .category:hover{
+            color: #fff;
+            background-color: #0084ff;
+        }
+        h5{
+            margin: 0px;
+        }
+        .item-description{
+            padding: 4% 9%;
+        }
+    </style>
+  </head>
+    <body>
+        <header>
+            <div class = "edstory">
+                <img src="https://s3-ap-southeast-1.amazonaws.com/internshala-uploads/google_logo/5f195133ee39e1595494707.png" alt="edyoda">
+                <p class="logostories">
+                    Stories
+                </p>
+            </div>
+            <div class="dropdown">
+                <div class="select-align">
+
+                </div>
+                <select>
+                    <option hidden selected disabled>Explore Categories</option>
+                    <option>Articial Intelligence</option>
+                    <option>Could Computing</option>
+                    <option>DevOps</option>
+                    <option>Others</option>
+                </select>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h1 class="trend-heading">Trending Posts</h1>
+                <h4 class="filter-text"><img src="https://cdn-icons-png.flaticon.com/512/566/566737.png" alt="filter" style="width: 15px; height: 15px; padding: 3px 3px 0px 0px; display:inline-block">Filter By Category</h4>
+                <div class="categories-container">
+                    <div class="category active">
+                        <h5>All</h5>
+                    </div>
+                    <div class="category"> 
+                        <h5>Articial Intelligence</h5>
+                    </div>
+                    <div class="category"> 
+                         <h5>Could Computing</h5>
+                    </div>
+                    <div class="category">
+                            <h5>DevOps</h5>
+                    </div>
+                    <div class="category">
+                           <h5>Pragramming Languages</h5>
+                    </div>
+                    <div class="category">   
+                         <h5>Mobile Application Development</h5>
+                    </div>
+                    <div class="category"> 
+                          <h5>Technology and Tools</h5>
+                    </div>
+                    <div class="category">  
+                         <h5>Get a job in a tech Company</h5>
+                    </div>
+                    <div class="category">  
+                          <h5>Others</h5>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                Introduction To A Machine Learning Online Course
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Edyoda</span><span class="date"> | 23 Aug 2019</span>
+                        </p>
+                        <p class="description">
+                            We have had an insight into Artificial intelligence. One of its subfields is machine learning and this introduction will help you understand what this machine learning is.
+                        </p>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                Lamp Stack VS Mean Stack
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Edyoda</span><span class="date"> | 24 Aug 2019</span>
+                        </p>
+                        <p class="description">
+                            In today's dynamic world, developing a rapid application with a smooth user interface that can adapt to specific features is the main business requirement. There are many applications for this.
+                        </p>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                Impact of cloud Computing in Various industries
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Edyoda</span><span class="date"> | 24 Aug 2019</span>
+                        </p>
+                        <p class="description">
+                            Cloud computing has been rapidly gaining pace in the world of information technology it has been observed that over go of global enterprises are using cloud.
+                        </p>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                Challenges of Machine Learning
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Edyoda</span><span class="date"> | 24 Aug 2019</span>
+                        </p>
+                        <p class="description">
+                            Machine Learning is a subset of artificial intelligence which is an important part of computer science. The revolution of Big Data promises to transform the way we work and live.           
+                        </p>
+                    </div>
+                </div>
+            
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                Breaking The Myths around Cyber Security
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Edyoda</span><span class="date"> | 26 Aug 2019</span>
+                        </p>
+                        <p class="description">
+                            Cybersecurity plays an integral rote in the process of good business models But even cybersecurity programs built with good intentions can fall short in front of advanced cyber attacking     
+                        </p>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                Importance of Data Backup & Recovery
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Edyoda</span><span class="date"> | 26 Aug 2019</span>
+                        </p>
+                        <p class="description">
+                            A business must always introspect the areas where they lack in order to bring about a positive change in the work environment. One of the main precautions measure is to keep learning.
+                        </p>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                What is Web Scraping?
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author"> Zac Clancy</span><span class="date"> | 25 Sep 2019</span>
+                        </p>
+                        <p class="description">
+                            Simply put, web scriing is one of the tools developers use gather and analyze information for internet. Some websites and platforms offer application programining interfaces which can be used in web scraping the data you need.   
+                        </p>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                What is Income Share Agreement?
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Edyoda</span><span class="date"> | 14 Oct 2019</span>
+                        </p>
+                        <p class="description">
+                            The term income Share Agreement has been around for a long time since 1955 to be precise. Surprised, eh? it was first introduced by Milton Friedman, an American economist. It creates a great opportunity.            
+                        </p>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class="img-container">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png">
+                    </div>
+                    <div class="item-description">
+                        <h3>
+                            <div>
+                                Practical Machine Learning with Python and Keras
+                            </div>
+                        </h3>
+                        <p class="author-container">
+                            <span class="author">Daniel Pyrathon</span><span class="date"> | 16 Oct 2019</span>
+                        </p>
+                        <p class="description">
+                            Machine learning field artificial intelligence that uses statistical techniques to give computer systems the ability to learn (e.g. progressively improve performance on a specific..            
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main> 
+        <footer>                         
+        </footer>
+    </body>
+</html>
