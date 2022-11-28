@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
+        <style>
+            body{
+                font-family: 'Alexandria';
+            }
+            header{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                margin: 50px 0px 70px 0px;
+            }
+            .menu{
+                display: flex;
+                margin: 10px;
+                flex-wrap: wrap;
+                align-content: center;
+                height: 50px;
+            }
+            .menu>div{
+                width: 80px;
+                margin: 10px;
+                font-size: 20px;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.3);
+            }
+            .menu>div:hover{
+                width: 80px;
+                margin: 10px;
+                font-size: 20px;
+                text-align: center;
+                color: black;
+                text-decoration-line: underline;
+                text-decoration-color: #8071D0;
+                text-underline-offset: 5px;
+                text-decoration-thickness: 3px;
+            }
+            main{
+                display: flex;
+                margin-left: 100px;
+            }
+            h1{
+                margin-top: 0px;
+                font-size: 90px;
+                font-weight: 300px;
+                font-family: tablet-gothic-condensed,sans-serif;
+            }
+            p{
+                white-space: wrap;
+            }
+            #logo{
+                margin-left: 40px;
+            }
+            #youraccount{
+                margin-right: 30px;
+                border-radius: 20px;
+                background-color: #FFD8DB;
+                padding: 20px 30px;
+                color: rgb(98, 81, 195);
+                
+            }
+            .content{
+                width: 40%;
+            }
+            .image{
+                width: 59%;
+            }
+            #newaccount{
+                border-radius: 20px;
+                background-color: #5243C0;
+                padding: 20px 30px;
+                color: white;
+            }
+            #dot{
+                color: #5243C0;
+            }
+            .designmenu{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="./src/stunning-logo.png" alt="logo" width="120px" height="50px">
+            </div>
+            <div class="menu">
+                <div>Home</div>
+                <div>About</div>
+                <div>Blog</div>
+                <div>Jobs</div>
+            </div>
+            <div id="youraccount">Your Account</div>
+        </header>
+        <main>
+            <div class="content">
+                <h1>Stunning Workplace<span id="dot">.</span></h1>
+                <p>With Stunning, remote teams can organize projects, manage shifting priorities, and get work done. </p>
+                <span id="newaccount">New Account</span>
+                <img src="./src/arrow-up.png" alt="arrow-up">
+                <img src="./src/arrow-down.png" alt="arrow-down">
+                <div class="designmenu">
+                    <div>
+                        <div>
+                            <img src="./src/tick-gray.png" alt="gray-tick">
+                        </div>
+                        <div>
+                            Dmm design
+                        </div>
+                        <div>
+                            <img src="./src/user-pink.png" alt="pink-user">
+                        </div>
+                        <div>
+                            20 Dec
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    
+                </div>           
+                
+                <div>
+                    <img src="./src/tick-blue.png" alt="blue-tick">Blurr animation
+                    <img src="./src/user-orange.png" alt="orange-user"> 22 Dec
+                </div>
+                <br>
+                <img src="./src/tick-gray.png" alt="gray-tick">Illustration
+                <img src="./src/user-blue.png" alt="user-blue">26 Dec<br>
+                <img src="./src/tick-gray.png" alt="gray-tick"> Refunds
+                <img src="./src/user-red.png" alt="red-user"> 28 Dec
+            </div>
+            <div class="image"> <img src="./src/landing-section-image.png" alt="landing-section" width="800px" height="650px"></div>
+        </main>
+    </body>
+</html>
