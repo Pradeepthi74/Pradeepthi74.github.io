@@ -12,7 +12,7 @@
                 justify-content: space-between;
                 align-items: center;
                 height: 50px;
-                margin: 50px 0px 70px 0px;
+                margin: 30px 0px 70px 0px;
             }
             .menu{
                 display: flex;
@@ -44,13 +44,14 @@
                 margin-left: 100px;
             }
             h1{
-                margin-top: 0px;
+                margin: 0px;
                 font-size: 90px;
                 font-weight: 300px;
                 font-family: tablet-gothic-condensed,sans-serif;
             }
             p{
                 white-space: wrap;
+                margin: 40px 0px;
             }
             #logo{
                 margin-left: 40px;
@@ -82,6 +83,48 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-content: center;
+                margin: 30px 0px;
+            }
+            .element{
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                height: 50px;
+                margin: 40px 0px 70px 0px;
+                background-color: rgb(249, 249, 249);
+                border-radius: 15px;
+                margin: 5px;
+            }
+            .element>div{
+                margin: 10px;
+            }
+            .element:hover{
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                height: 50px;
+                margin: 50px 0px 70px 0px;
+                background-color: white;
+                border-radius: 15px;
+                margin: 5px;
+            }
+            .dot{
+                border-radius: 10px;
+                padding: 10px 0px 5px 10px;
+            }
+            .tick{
+                content:url("./src/tick-gray.png");
+            }
+            .tick:hover{
+                content:url("./src/tick-blue.png");
+            }
+            .bar{
+                display: flex;
+                align-content: center;
+                height: 50px;
+            }
+            .bar>img{
+                margin-left: 20px;
             }
         </style>
     </head>
@@ -101,40 +144,82 @@
         <main>
             <div class="content">
                 <h1>Stunning Workplace<span id="dot">.</span></h1>
-                <p>With Stunning, remote teams can organize projects, manage shifting priorities, and get work done. </p>
-                <span id="newaccount">New Account</span>
-                <img src="./src/arrow-up.png" alt="arrow-up">
-                <img src="./src/arrow-down.png" alt="arrow-down">
+                <p class="description">With Stunning, remote teams can organize projects, manage shifting priorities, and get work done. </p>
+                <div class="bar">
+                    <span id="newaccount">New Account</span>
+                    <img src="./src/arrow-up.png" alt="arrow-up">
+                    <img src="./src/arrow-down.png" alt="arrow-down">
+                </div>
                 <div class="designmenu">
-                    <div>
-                        <div>
-                            <img src="./src/tick-gray.png" alt="gray-tick">
+                    <div class="element">
+                        <div style="width: 32px;" >
+                            <img class="tick">
                         </div>
-                        <div>
+                        <div style="width: 150px;">
                             Dmm design
                         </div>
-                        <div>
+                        <div style="width: 36px;">
                             <img src="./src/user-pink.png" alt="pink-user">
                         </div>
-                        <div>
+                        <div style="width: 60px;">
                             20 Dec
                         </div>
-                        <div>
-                            <div></div>
+                        <div style="width: 30px">
+                            <div class="dot" style="background-color: rgb(255, 216, 219);"></div>
                         </div>
                     </div>
-                    
+                    <div class="element">
+                        <div style="width: 32px;" >
+                            <img class="tick">
+                        </div>
+                        <div style="width: 150px;">
+                            Blurr animation
+                        </div>
+                        <div style="width: 36px;">
+                            <img src="./src/user-orange.png" alt="orange-user">
+                        </div>
+                        <div style="width: 60px;">
+                            22 Dec
+                        </div>
+                        <div style="width: 30px">
+                            <div class="dot" style="background-color: rgb(253, 101, 52);"></div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <div style="width: 32px;" >
+                            <img class="tick">
+                        </div>
+                        <div style="width: 150px;">
+                            Illustration
+                        </div>
+                        <div style="width: 36px;">
+                            <img src="./src/user-blue.png" alt="blue-user">
+                        </div>
+                        <div style="width: 60px;">
+                            26 Dec
+                        </div>
+                        <div style="width: 30px">
+                            <div class="dot" style="background-color: rgb(159, 210, 151);"></div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <div style="width: 32px;" >
+                            <img class="tick">
+                        </div>
+                        <div style="width: 150px;">
+                            Refunds
+                        </div>
+                        <div style="width: 36px;">
+                            <img src="./src/user-red.png" alt="red-user">
+                        </div>
+                        <div style="width: 60px;">
+                            28 Dec
+                        </div>
+                        <div style="width: 30px">
+                            <div class="dot" style="background-color: rgb(255, 225, 155);"></div>
+                        </div>
+                    </div>
                 </div>           
-                
-                <div>
-                    <img src="./src/tick-blue.png" alt="blue-tick">Blurr animation
-                    <img src="./src/user-orange.png" alt="orange-user"> 22 Dec
-                </div>
-                <br>
-                <img src="./src/tick-gray.png" alt="gray-tick">Illustration
-                <img src="./src/user-blue.png" alt="user-blue">26 Dec<br>
-                <img src="./src/tick-gray.png" alt="gray-tick"> Refunds
-                <img src="./src/user-red.png" alt="red-user"> 28 Dec
             </div>
             <div class="image"> <img src="./src/landing-section-image.png" alt="landing-section" width="800px" height="650px"></div>
         </main>
