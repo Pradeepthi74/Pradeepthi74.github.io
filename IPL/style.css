@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(43, 43, 78);
+}
+
+body{
+    background-color: grey;
+    color: white;
+}
+
+tr{
+    cursor: pointer;
+}
