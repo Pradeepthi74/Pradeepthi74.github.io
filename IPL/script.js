@@ -1,34 +1,34 @@
 var teamObj1 = {
     name: "MI",
-    icon: "url",
+    icon: "https://m.media-amazon.com/images/I/51GxgGLmzfL._AC_SS450_.jpg",
     playerCount: 0,
     topBatsman: "Rohit Sharma",
-    topBowler: "Default",
+    topBowler: "Hardik Pandya",
     championshipsWon: 3
 }
 
 var teamObj2 = {
     name: "RR",
-    icon: "url",
+    icon: "https://whoowner.b-cdn.net/wp-content/uploads/2018/02/Owner-of-Rajasthan-Royals-Team-India-RR-Wiki-Logo.jpg",
     playerCount: 0,
-    topBatsman: "Default",
-    topBowler: "Default",
+    topBatsman: "Chris Morris",
+    topBowler: "Chris Morris",
     championshipsWon: 5
 }
 
 var teamObj3 = {
     name: "RCB",
-    icon: "url",
+    icon: "https://rukminim1.flixcart.com/image/416/416/kfh5ifk0-0/poster/w/y/s/medium-p-44414-rcb-royal-challenger-bangalore-logo-ipl-2020-team-original-imafvxhehngvfthd.jpeg",
     playerCount: 0,
     topBatsman: "Virat Kohli",
-    topBowler: "Default",
+    topBowler: "Glenn Maxwell",
     championshipsWon: 7
 }
 
 var playerObj1 = {
     id: 0,
     playerName: "Hardik Pandya",
-    photo: "url",
+    photo: "https://www.mykhel.com/thumb/247x100x233/cricket/players/0/7780.1666933992.jpg",
     from: "MI",
     price: "6.50 Cr",
     isPlaying: true,
@@ -38,7 +38,7 @@ var playerObj1 = {
 var playerObj2 = {
     id: 1,
     playerName: "Virat Kohli",
-    photo: "url",
+    photo: "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_640,q_50/lsci/db/PICTURES/CMS/316600/316605.png",
     from: "RCB",
     price: "8.0 Cr",
     isPlaying: true,
@@ -48,7 +48,7 @@ var playerObj2 = {
 var playerObj3 = {
     id: 2,
     playerName: "Yuvraj Singh",
-    photo: "url",
+    photo: "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/playerheadshot/ipl/284/113.png",
     from: "MI",
     price: "1.00 Cr",
     isPlaying: false,
@@ -58,7 +58,7 @@ var playerObj3 = {
 var playerObj4 = {
     id: 3,
     playerName: "Chris Morris",
-    photo: "url",
+    photo: "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_640,q_50/lsci/db/PICTURES/CMS/320300/320342.png",
     from: "RR",
     price: "16.25 Cr",
     isPlaying: true,
@@ -68,7 +68,7 @@ var playerObj4 = {
 var playerObj5 = {
     id: 4,
     playerName: "Glenn Maxwell",
-    photo: "url",
+    photo: "https://www.melbournestars.com.au/-/media/Players/Men/Domestic/Melbourne%20Stars/BBL12/GlennMaxwell1-BBL12.ashx",
     from: "RCB",
     price: "14.25 Cr",
     isPlaying: true,
@@ -78,7 +78,7 @@ var playerObj5 = {
 var playerObj6 = {
     id: 5,
     playerName: "Rohit Sharma",
-    photo: "url",
+    photo: "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_640,q_50/lsci/db/PICTURES/CMS/316500/316584.png",
     from: "MI",
     price: "6.50 Cr",
     isPlaying: true,
@@ -88,7 +88,7 @@ var playerObj6 = {
 var playerObj7 = {
     id: 6,
     playerName: "Ishan Kishan",
-    photo: "url",
+    photo: "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_640,q_50/lsci/db/PICTURES/CMS/331100/331165.png",
     from: "MI",
     price: "2.50 Cr",
     isPlaying: true,
@@ -103,38 +103,59 @@ onload = () => {
     var players = JSON.parse(localStorage.getItem("players") || "[]");
     if ((teams.length < 1) || (players.length < 1)) {
         console.log("Addding data");
-        addTeams();
+        addData();
     }
     displayTeams();
+    updatePlayerCount();
     localStorage.setItem("currentTeam", "MI");
 }
 
 
-function addTeams() {
+function addData() {
     localStorage.setItem("teams", JSON.stringify(teamsArr));
     localStorage.setItem("players", JSON.stringify(playersArr));
 }
 
 function displayTeams() {
     teams = JSON.parse(localStorage.getItem("teams") || "[]");
-    players = JSON.parse(localStorage.getItem("players") || "[]");
     var data = document.getElementById("data");
-    data.innerHTML = JSON.stringify(teams);
-    var teamsData = "<table border='1|1' id='indexedTable'>";
+    var teamsData = "";
     for (var i = 0; i < teams.length; i++) {
-        teamsData += "<tr id="+ teams[i].name +">";
-        teamsData += "<td>" + teams[i].name + "</td>";
-        teamsData += "<td>" + teams[i].icon + "</td>";
-        teamsData += "<td>" + teams[i].playerCount + "</td>";
-        teamsData += "<td>" + teams[i].topBatsman + "</td>";
-        teamsData += "<td>" + teams[i].topBowler + "</td>";
-        teamsData += "<td>" + teams[i].championshipsWon + "</td>";
-        teamsData += "</tr>";
+        teamsData += "<div class='teamFlex'" + " onclick='teamsPage(" + JSON.stringify(teams[i].name) + ")'>";
+        teamsData += '<img src="'+ teams[i].icon +'" alt="playerPhoto" width="200px" height="200px">';
+        teamsData += '<p>'+ teams[i].name +'</p>';
+        teamsData += "</div>";
     }
-    teamsData += "</table>";
     data.innerHTML = teamsData;
 }
 
-$("#indexedTable").on("click", "tr", function(e) {
-    console.log($(e.currentTarget).index() + 1);
-});
+function teamsPage(val) {
+    localStorage.setItem("currentTeam", val);
+    window.location = "./team.html"
+}
+
+function updatePlayerCount() {
+    var arr = JSON.parse(localStorage.getItem("players") || "[]");
+    localStorage.setItem("playerCount", arr.length);
+}
+
+function searchPlayers() {
+    let filter = document.getElementById('search').value.toUpperCase();
+    var players = JSON.parse(localStorage.getItem("players") || "[]");
+    var displayArea = document.getElementById("dropdown-content");
+    var res = "";
+    for (var i = 0; i < players.length; i++) {
+        if (players[i].from.indexOf(filter) > -1) {
+            res += "<p " + "onclick='playersPage(" + players[i].id + ")'>";
+            res += players[i].playerName + " from "  + players[i].from;
+            res += "</p>";
+        }
+    }
+    displayArea.innerHTML = res;
+}
+
+function playersPage(val){
+    console.log(val);
+    localStorage.setItem("currentPlayer", val);
+    window.location = "./player.html"
+}

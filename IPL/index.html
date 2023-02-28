@@ -14,12 +14,24 @@
 
 <body>
     <header>
-        <input type="text">
-        <span class="material-symbols-outlined">
-            add
-        </span>
+        <div class="dropdown">
+            <input type="text" id="search" placeholder="Enter team name" onkeyup="searchPlayers()">
+            <div id="dropdown-content">
+            </div>
+        </div>
+        <div class="dropdown">
+            <span class="material-symbols-outlined">
+                add
+            </span>
+            <div id="dropdown-content">
+                <a href="./addPlayer.html">Add Player</a>
+                <a href="./addTeam.html">Add Team</a>
+            </div>
+        </div>
     </header>
-    <main id="data">
+    <main id="homeMain">
+        <h1>IPL Teams</h1>
+        <div id="data"></div>
     </main>
 </body>
 

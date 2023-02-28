@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <span class="material-symbols-outlined">
+                home
+            </span>
+        </a>
+    </header>
+    <main id="addPlayerMain">
+        <form id="form">
+            <input type="text" placeholder="Full Name Ex: Virat Kohli" class="form-control" id="name" required>
+            <input type="text" placeholder="Photo URL Ex: https://bcciplayerimages.s3.ap-south-1.amazonaws.com/playerheadshot/ipl/284/113.png" class="form-control" id="url" required>
+            <label for="team">Choose a team:</label>
+            <select name="team" id="team">
+            </select>
+            <input type="text" placeholder="Player price Ex: 8.5 Cr" class="form-control" id="price" required>
+            <label for="isPlaying">Playing Status</label>
+            <select name="isPlaying" id="isPlaying">
+                <option value="Playing">Playing</option>
+                <option value="onBench">On-Bench</option>
+            </select>
+            <label for="role">Player Role</label>
+            <select name="role" id="role">
+                <option value="batsman">BatsMan</option>
+                <option value="bowler">Bowler</option>
+                <option value="allRounder">All-Rounder</option>
+            </select>
+            <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+            <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+        </form>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="addPlayerScript.js"></script>
+    <script>
+        //allData()
+    </script>
+    <script>
+        function clearData() {
+            document.getElementById('form').reset()
+            document.getElementById('id').value = ""
+        }
+    </script>
+</body>
+
+</html>

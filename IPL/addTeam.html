@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <span class="material-symbols-outlined">
+                home
+            </span>
+        </a>
+    </header>
+    <main id="addPlayerMain">
+        <form id="form">
+            <input type="text" placeholder="Team Name Ex: MI" class="form-control" id="name" required>
+            <input type="text" placeholder="Team Icon URL Ex: https://bcciplayerimages.s3.ap-south-1.amazonaws.com/playerheadshot/ipl/284/113.png" class="form-control" id="url" required>
+            <input type="text" placeholder="Top BatsMan Ex: Virat Kohli" class="form-control" id="tbat" required>
+            <input type="text" placeholder="Top Bowler Ex: Glenn Maxwell" class="form-control" id="tbow" required>
+            <input type="number" placeholder="Championship Won Count Ex: 5" class="form-control" id="won" required>
+            <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+            <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+        </form>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="addTeamScript.js"></script>
+    <script>
+        //allData()
+    </script>
+    <script>
+        function clearData() {
+            document.getElementById('form').reset()
+            document.getElementById('id').value = ""
+        }
+    </script>
+</body>
+
+</html>
